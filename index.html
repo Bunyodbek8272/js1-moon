@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My first page with Js</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo">Logo</a>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+  <section>
+    <img src="imgs/stars.png" id="stars">
+    <img src="imgs/moon.png" id="moon">
+    <img src="imgs/mountains_behind.png" id="mountains_behind">
+    <h2 id="text">Moon Light</h2>
+    <a href="#sec" id="btn">Explore</a>
+    <img src="imgs/mountains_front.png" id="mountains_front">
+  </section>
+  <div class="sec" id="sec">
+    <h2>Parallax Scrolling Effects</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam mollitia voluptates itaque eaque, exercitationem
+      ducimus veniam veritatis cumque tenetur reiciendis ab amet non vel natus! Perspiciatis iusto voluptatum aperiam
+      nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium temporibus, magnam esse ducimus
+      reprehenderit corrupti fuga voluptas aliquid minus vel quae est. Esse pariatur voluptatem numquam nostrum aut fuga
+      ullam.
+      Minus autem magni placeat repudiandae qui aliquam excepturi est provident reprehenderit nemo amet, earum molestias
+      asperiores tenetur fuga soluta eum eius. Explicabo similique aliquid, numquam officia autem dicta? Nobis, modi.
+      Ad enim error autem quae recusandae atque consequatur laboriosam, officiis reiciendis cum nobis dicta dignissimos!
+      Id dolor, ab sequi repellat cupiditate ducimus neque omnis. Inventore voluptatem distinctio optio beatae quod.
+      <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui tenetur quidem sapiente officiis odio rem minima
+      mollitia optio id! Cum dolor laborum repudiandae libero corrupti ea provident ab harum culpa?
+      Perspiciatis odio unde maxime quibusdam molestiae, obcaecati libero architecto ad veniam non reprehenderit
+      cupiditate nihil aspernatur, facere amet laborum quod perferendis deleniti ipsa labore! Veritatis necessitatibus
+      neque rem alias dignissimos!
+      Earum voluptas, error, enim iure quas ratione molestias nostrum amet quo labore fuga ab, facere quos quae
+      doloremque praesentium tempore sequi culpa optio nulla aliquid laudantium ex? Autem, veniam doloremque?
+      Quia voluptate ea architecto modi iure dignissimos ut sed nostrum amet, culpa similique molestias, aliquid
+      <br> <br>perspiciatis, maiores consequuntur non vel nobis optio. Iure magni vero unde itaque sed? Vel, nostrum!
+      Quos laudantium ipsum optio magnam, repellendus vel ex at quisquam quis quo. Repudiandae aperiam ad maxime,
+      expedita accusamus reiciendis error, ab numquam, eum inventore natus explicabo. Similique incidunt velit
+      voluptatibus.
+      Inventore, ad fugit illum tempore nostrum est voluptate ipsam maiores libero alias harum nam porro ullam corrupti
+      unde quos nesciunt sed consequuntur quaerat distinctio dolores. Tenetur voluptatum dolorum odit aliquam? 
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint necessitatibus voluptates maxime quo mollitia
+      dolore, eos sequi eligendi, rem totam animi quia voluptatem odit asperiores perferendis molestias error culpa
+      cupiditate.<br> <br>
+      Quia at unde quam, soluta totam assumenda! Dolores neque ducimus ut porro, pariatur perspiciatis recusandae
+      explicabo debitis similique voluptatum esse ipsum, possimus nesciunt deserunt, vel facere omnis? Doloribus, ea
+      deleniti.
+      Ad expedita ducimus minima totam libero fugit voluptates eos culpa autem quas est voluptas labore nisi enim
+      beatae, tempora illo, animi saepe impedit reprehenderit! Natus neque quibusdam dignissimos ducimus ad.
+    </p>
+  </div>
+  <footer>
+    <h3>Copyright 1999-2022 by Bunyodbek. All Rights Reserved.
+      <br> bekmuhammedovb@gmail.com 
+      </h3>
+  </footer>
+  <script>
+    let stars = document.getElementById("stars");
+    let moon = document.getElementById("moon");
+    let mountains_behinds = document.getElementById("mountains_behind");
+    let text = document.getElementById("text");
+    let btn = document.getElementById("btn");
+    let mountains_front = document.getElementById("mountains_front");
+    let header = document.querySelector("header");
+
+    window.addEventListener('scroll',function(){
+      let value = window.scrollY;
+      stars.style.left = value * 0.25 + 'px';
+      moon.style.top = value * 1.05 + 'px';
+      mountains_behinds.style.left = value * .05 + 'px';
+      mountains_front.style.left = value * 0 + 'px';
+      text.style.marginRight = value * 4 + 'px';
+      text.style.marginTop = value * 1.5 + 'px';
+      btn.style.marginTop = value * 1.5 + 'px';
+      header.style.top = value * .5 + 'px'; 
+
+    })
+  </script>
+</body>
+
+</html>
